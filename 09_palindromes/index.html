@@ -1,5 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
 function ischaraletter(char){
-    if(char.toLowerCase()!=char.toUpperCase()){
+    if(char.toLowerCase()!=char.toUpperCase() ){
         return true;
     }
     return false;
@@ -22,15 +35,21 @@ const palindromes = function (palavra) {
     aux.push(palavra[i]);
     }
    }
+    console.log (aux);
     i=0;
-    for(j=aux.length-1;i<aux.length-1/2;j--){
+    for(j=aux.length-1;i<aux.length/2;j--){
         if(aux[i]!=aux[j]){
             return false;
         }
         i++
     }
     return true;
-};
 
-// Do not edit below this line
-module.exports = palindromes;
+    
+
+};palindromes("racecar");
+
+</script>
+
+</body>
+</html>
