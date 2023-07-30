@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+
+
+
+function calcage(birth,death){
+
+if(!death){
+    death=new Date().getFullYear;
+}
+return death-birth;
+
+
+}
+
+const findTheOldest = function(people) {
+
+
+let oldest = people.reduce((older,current)=>{
+    let age1=calcage(older.yearOfBirth,older.yearOfDeath);
+    let age2=calcage(current.yearOfBirth,current.yearOfDeath);
+    if(age1<age2){
+        return current;
+    }else{
+        return older;
+    }
+} )
+return oldest;
+
+
+// people.sort(compareage);
+
+// return(people[0]);
+
+};
+
+const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1942,
+        yearOfDeath: 1970,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
+    let achei = findTheOldest(people);
+    console.log(achei);
+
+
+
+
+    </script>
+
+</body>
+</html>
